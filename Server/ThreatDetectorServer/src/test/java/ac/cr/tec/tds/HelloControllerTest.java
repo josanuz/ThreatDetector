@@ -1,4 +1,4 @@
-package tds;
+package ac.cr.tec.tds;
 
 import com.jayway.restassured.RestAssured;
 import org.junit.Before;

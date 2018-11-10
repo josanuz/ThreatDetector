@@ -1,4 +1,4 @@
-package tds;
+package ac.cr.tec.tds;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +20,12 @@ public class HelloController {
 
     @Data
     static class Result {
+        public Result(int left, int right, long answer) {
+            this.left = left;
+            this.right = right;
+            this.answer = answer;
+        }
+
         private final int left;
         private final int right;
         private final long answer;

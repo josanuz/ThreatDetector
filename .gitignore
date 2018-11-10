@@ -25,4 +25,7 @@ hs_err_pid*
 Server/*/target/
 Server/*/build/
 */*.class
-
+.settings
+.project
+.classpath
+.factorypath
