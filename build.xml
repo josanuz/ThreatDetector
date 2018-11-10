@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project name="ThreadDetector" default="build">
+<!-- Conditions -->
+    <condition property="isWindows">
+        <os family="windows" />
+    </condition>
+
+    <condition property="isUnix">
+        <os family="unix" />
+    </condition>
+<!-- /Conditions -->
+<!-- Properties -->
+<property name="ServerDir" value="${basedir}/Server"/>
+<!-- /Properties -->
+
+    <target name="mvn_windows" if="isWindows">
+        <exec dir="${ServerDir}" executable="cmd">
+            <arg line="/c mvn clean build" />
+        </exec>
+    </target>
+
+    <target name="mvn_unix" if="isUnix">
+        <exec dir="${ServerDir}" executable="sh">
+            <arg line="-c 'mvn clean build'" />
+        </exec>
+    </target>
+
+    <target name="server" depends="mvn_windows,mvn_windows">
+        <echo>Building MVN for Server</echo>
+    </target>
+
+    <target name="build" depends="server">
+    </target>
+
+
+</project>
