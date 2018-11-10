@@ -9,28 +9,46 @@
         <os family="unix" />
     </condition>
 <!-- /Conditions -->
+
 <!-- Properties -->
 <property name="ServerDir" value="${basedir}/Server"/>
 <!-- /Properties -->
 
+    <target name="_build">
+        <property name="_opt" value="compile"/>
+    </target>
+
+    <target name="_pck">
+        <property name="_opt" value="package"/>
+    </target>
+
+    <target name="_clean">
+        <property name="_opt" value=""/>
+    </target>
+
     <target name="mvn_windows" if="isWindows">
-        <exec dir="${ServerDir}" executable="cmd">
-            <arg line="/c mvn clean build" />
+        <exec dir="${ServerDir}" executable="cmd" failonerror="true" failifexecutionfails="true">
+            <arg line="/c mvn clean ${_opt}" />
         </exec>
     </target>
 
     <target name="mvn_unix" if="isUnix">
-        <exec dir="${ServerDir}" executable="sh">
-            <arg line="-c 'mvn clean build'" />
+        <exec dir="${ServerDir}" executable="sh" failonerror="true" failifexecutionfails="true">
+            <arg line="-c 'mvn clean ${_opt}'" />
         </exec>
     </target>
 
-    <target name="server" depends="mvn_windows,mvn_windows">
+    <target name="server" depends="mvn_windows,mvn_unix">
         <echo>Building MVN for Server</echo>
     </target>
 
-    <target name="build" depends="server">
-    </target>
+    <target name="build_server" depends="_build,server"/>
+    
+    <target name="package_server" depends="_pck,server"/>
+
+    <target name="build" depends="build_server"/>
+
+    <target name="clean" depends="_clean,server"/>
 
 
 </project>
