@@ -29,3 +29,8 @@ Server/*/build/
 .project
 .classpath
 .factorypath
+
+
+# Idea files
+
+.idea/
