@@ -12,7 +12,7 @@
             "description": "Packet Destination IP",
             "type": "string"
         },
-        "Headers": {
+        "headers": {
             "type": "array",
             "items": {
                 "type": "object",
