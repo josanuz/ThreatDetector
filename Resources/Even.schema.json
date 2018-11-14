@@ -48,6 +48,7 @@
                     "type": "string"
                 }
             }
-        }
+        },
+        "required" : ["orginIp", "destinationIP", "protocol", "lenght", "content"]
     }
 }
