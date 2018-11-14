@@ -49,6 +49,6 @@
                 }
             }
         },
-        "required" : ["orginIp", "destinationIP", "protocol", "lenght", "content"]
+        "required" : ["orginIp", "Headers", "destinationIP", "protocol", "lenght", "content"]
     }
 }
