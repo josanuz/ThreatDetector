@@ -60,7 +60,7 @@ Download sources dependencies.
 ## Execute the projec ( Start Srpint Server)
 
 ```bash
- $ java -jar ThreatDetectorServer/target/ThreatDetectorServer-1-ALPHA.jar 
+ $ java -jar ThreatDetectorServer/target/ThreatDetectorServer-1-X.jar 
 ```
 
 ## Project documentation
