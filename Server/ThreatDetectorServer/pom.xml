@@ -61,6 +61,12 @@
             <version>${rest.assured.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>ac.cr.tec</groupId>
+            <artifactId>ThreatDetectorCommon</artifactId>
+            <version>1.0-ALPHA</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
