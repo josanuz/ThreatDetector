@@ -57,10 +57,10 @@ Download sources dependencies.
 ```bash
  $ mvn dependency:sources
 ```
-## Execute the project
+## Execute the projec ( Start Srpint Server)
 
 ```bash
- $ java -cp target/.jar com.
+ $ java -jar ThreatDetectorServer/target/ThreatDetectorServer-1-ALPHA.jar 
 ```
 
 ## Project documentation
