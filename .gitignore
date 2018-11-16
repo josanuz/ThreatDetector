@@ -34,3 +34,4 @@ Server/*/build/
 # Idea files
 
 .idea/
+ *.iml
