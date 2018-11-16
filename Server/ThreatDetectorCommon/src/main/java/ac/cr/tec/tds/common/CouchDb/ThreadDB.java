@@ -17,6 +17,7 @@ public class ThreadDB extends CouchDB {
         List<Thread> lal =repo.getAll();
         for (Thread email: lal){
             System.out.println(email);
+            System.out.println(email.getProperties());
         }
     }
 

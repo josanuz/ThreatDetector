@@ -1,5 +1,6 @@
 package ac.cr.tec.tds.common.CouchDb.Entities;
 
+import org.codehaus.jackson.JsonNode;
 import org.ektorp.support.CouchDbDocument;
 
 public class Thread extends CouchDbDocument{
@@ -8,7 +9,8 @@ public class Thread extends CouchDbDocument{
     private String $schema;
     private String title;
     private String description;
-
+    private String type;
+    private JsonNode properties;
 
 
     /* ------------------------------------------------------------ */
@@ -45,7 +47,15 @@ public class Thread extends CouchDbDocument{
         this.type = type;
     }
 
-    private String type;
+    public JsonNode getProperties() {
+        return properties;
+    }
+
+    public void setProperties(JsonNode properties) {
+        this.properties = properties;
+    }
+
+
 
 
 
