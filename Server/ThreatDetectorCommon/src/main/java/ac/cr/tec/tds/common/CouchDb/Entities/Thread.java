@@ -3,6 +3,8 @@ package ac.cr.tec.tds.common.CouchDb.Entities;
 import org.codehaus.jackson.JsonNode;
 import org.ektorp.support.CouchDbDocument;
 
+import java.util.List;
+
 public class Thread extends CouchDbDocument{
 
     /* ------------------------------ Document Keys ----------------- */
@@ -11,6 +13,18 @@ public class Thread extends CouchDbDocument{
     private String description;
     private String type;
     private JsonNode properties;
+
+
+    /* ------------------------------ Protocols ----------------- */
+
+    static public String ProtocolHttp = "HTTP";
+    static public String ProtocolPop3 = "POP3";
+    static public String ProtocolImap = "IMAP";
+
+    /* ------------------------------ Message Type ----------------- */
+
+    static public String messageTypeMail = "Mail";
+    static public String messageTypeHttpRequest = "HTTP Request";
 
 
     /* ------------------------------------------------------------ */
@@ -49,6 +63,39 @@ public class Thread extends CouchDbDocument{
 
     public JsonNode getProperties() {
         return properties;
+    }
+
+    /* ------------------------- Properties Keys ----------------- */
+
+
+    public JsonNode propertiesOriginIP(){
+        return this.properties.findValue("originIp");
+    }
+
+    public JsonNode propertiesDestinationIP(){
+        return this.properties.findValue("destinationIP");
+    }
+
+    public JsonNode propertiesHeaders(){
+        return this.properties.findValue("headers");
+    }
+
+
+    public JsonNode propertiesProtocol(){
+        return this.properties.findValue("protocol");
+    }
+
+    public JsonNode propertiesLength(){
+        return this.properties.findValue("length");
+    }
+
+    public JsonNode propertiesContent(){
+        return this.properties.findValue("content");
+    }
+
+    public JsonNode propertiesRequired(){
+        return this.properties.findValue("required");
+
     }
 
     public void setProperties(JsonNode properties) {
