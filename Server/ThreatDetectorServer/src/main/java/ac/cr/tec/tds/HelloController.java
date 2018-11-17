@@ -5,26 +5,34 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
+
+
     @Autowired
     NamedParameterJdbcTemplate jdbcTemplate;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     String hello() {
+
         return "Hello World!";
     }
 
     @RequestMapping( value = "/apitest", method = RequestMethod.GET)
     String hi() {
-       ThreadDB couchDB = new ThreadDB("spam_det");
-       couchDB.getAllEmails();
-        return "Hola Mami";
+        ThreadDB couchDB = new ThreadDB("spam_det");
+        couchDB.getAllEmails();
+        return "<h1 style=\"color: blue;\"> Test for HTML  </h1>";
+    }
+
+    @RequestMapping(value = "/getString", method = RequestMethod.POST, produces = "application/json")
+    String hi2(@RequestBody String data) {
+        ThreadDB couchDB = new ThreadDB("spam_det");
+        System.out.println(data);
+        couchDB.insertElements(data);
+        return "{\"hello\":\"lala\"}";
     }
 
     @Data
