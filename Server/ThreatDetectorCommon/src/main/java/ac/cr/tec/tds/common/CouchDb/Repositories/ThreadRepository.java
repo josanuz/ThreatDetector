@@ -1,14 +1,14 @@
 package ac.cr.tec.tds.common.CouchDb.Repositories;
 
 
-import ac.cr.tec.tds.common.CouchDb.Entities.Thread;
+import ac.cr.tec.tds.common.CouchDb.Entities.Threat;
 import org.ektorp.CouchDbConnector;
 import org.ektorp.support.CouchDbRepositorySupport;
 
-public class ThreadRepository extends CouchDbRepositorySupport<Thread> {
+public class ThreadRepository extends CouchDbRepositorySupport<Threat> {
 
     public ThreadRepository(CouchDbConnector db){
-        super(Thread.class, db);
+        super(Threat.class, db);
     }
 }
 

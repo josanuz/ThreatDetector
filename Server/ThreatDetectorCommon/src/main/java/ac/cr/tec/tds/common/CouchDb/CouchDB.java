@@ -2,16 +2,17 @@ package ac.cr.tec.tds.common.CouchDb;
 
 
 import io.github.cdimascio.dotenv.Dotenv;
-import org.ektorp.*;
-import org.ektorp.impl.*;
-import org.ektorp.http.*;
+import org.ektorp.CouchDbConnector;
+import org.ektorp.CouchDbInstance;
+import org.ektorp.http.HttpClient;
+import org.ektorp.http.StdHttpClient;
+import org.ektorp.impl.StdCouchDbInstance;
+
 /*import org.ektorp.CouchDbConnector;
 import org.ektorp.CouchDbInstance;
 import org.ektorp.http.HttpClient;
 import org.ektorp.http.StdHttpClient;
 import org.ektorp.impl.StdCouchDbInstance;*/
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 public class CouchDB {
@@ -42,7 +43,7 @@ public class CouchDB {
             this.dbConnector = dbInstance.createConnector(dataBaseName, false);
 
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
 
     }

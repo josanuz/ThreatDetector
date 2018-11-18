@@ -5,7 +5,7 @@ import org.ektorp.support.CouchDbDocument;
 
 import java.util.List;
 
-public class Thread extends CouchDbDocument{
+public class Threat extends CouchDbDocument{
 
     /* ------------------------------ Document Keys ----------------- */
     private String $schema;
