@@ -1,4 +1,4 @@
-package ac.cr.tec.tds.common.CouchDb.Entities;
+package ac.cr.tec.tds.common.entities;
 
 import org.codehaus.jackson.JsonNode;
 import org.ektorp.support.CouchDbDocument;

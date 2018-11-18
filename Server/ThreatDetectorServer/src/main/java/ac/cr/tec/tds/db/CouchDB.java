@@ -1,4 +1,4 @@
-package ac.cr.tec.tds.common.CouchDb;
+package ac.cr.tec.tds.db;
 
 
 import io.github.cdimascio.dotenv.Dotenv;

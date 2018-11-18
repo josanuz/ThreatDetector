@@ -1,17 +1,18 @@
-package ac.cr.tec.tds.common.CouchDb;
+package ac.cr.tec.tds.dao;
 
-import ac.cr.tec.tds.common.CouchDb.Entities.Threat;
-import ac.cr.tec.tds.common.CouchDb.Repositories.ThreadRepository;
+import ac.cr.tec.tds.common.entities.Threat;
+import ac.cr.tec.tds.db.CouchDB;
+import ac.cr.tec.tds.repositories.ThreatRepository;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThreadDB extends CouchDB {
+public class ThreatDB extends CouchDB {
 
 
-    public ThreadDB(String dbName){
+    public ThreatDB(String dbName){
         super(dbName);
     }
 
@@ -21,8 +22,8 @@ public class ThreadDB extends CouchDB {
      *
      */
     public void getAllEmails(){
-        ThreadRepository repo = new ThreadRepository(this.dbConnector);
-        List<Threat> lal =repo.getAll();
+        ThreatRepository repo = new ThreatRepository(this.dbConnector);
+        List<Threat> lal = repo.getAll();
         for (Threat email: lal){
             System.out.println(email);
             //System.out.println(email.getProperties());
