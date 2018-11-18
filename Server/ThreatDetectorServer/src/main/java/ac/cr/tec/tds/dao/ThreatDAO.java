@@ -9,10 +9,10 @@ import org.codehaus.jackson.map.ObjectMapper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThreatDB extends CouchDB {
+public class ThreatDAO extends CouchDB {
 
 
-    public ThreatDB(String dbName){
+    public ThreatDAO(String dbName){
         super(dbName);
     }
 
