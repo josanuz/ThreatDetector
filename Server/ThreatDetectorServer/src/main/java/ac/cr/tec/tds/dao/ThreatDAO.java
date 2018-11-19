@@ -1,28 +1,33 @@
 package ac.cr.tec.tds.dao;
 
-import ac.cr.tec.tds.common.entities.Threat;
+import ac.cr.tec.tds.common.entities.couchDb.Threat;
 import ac.cr.tec.tds.db.CouchDB;
 import ac.cr.tec.tds.repositories.ThreatRepository;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.ektorp.CouchDbConnector;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThreatDAO extends CouchDB {
+@Component
+public class ThreatDAO{
 
 
-    public ThreatDAO(String dbName){
-        super(dbName);
+    public ThreatDAO(){
+        super();
     }
 
+    @Autowired
+    ThreatRepository repo;
 
     /**
      * Get all elements from the current database
      *
      */
     public void getAllEmails(){
-        ThreatRepository repo = new ThreatRepository(this.dbConnector);
         List<Threat> lal = repo.getAll();
         for (Threat email: lal){
             System.out.println(email);
@@ -53,7 +58,7 @@ public class ThreatDAO extends CouchDB {
                     itemList.add(item);
                 }
 
-            this.dbConnector.executeBulk(itemList);
+            //this.dbConnector.executeBulk(itemList);
         } catch(Exception e) {
             e.printStackTrace();
         }

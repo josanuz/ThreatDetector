@@ -1,12 +1,17 @@
 package ac.cr.tec.tds.db;
 
 
-import io.github.cdimascio.dotenv.Dotenv;
+import ac.cr.tec.tds.CouchDBConfig;
 import org.ektorp.CouchDbConnector;
 import org.ektorp.CouchDbInstance;
 import org.ektorp.http.HttpClient;
 import org.ektorp.http.StdHttpClient;
 import org.ektorp.impl.StdCouchDbInstance;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /*import org.ektorp.CouchDbConnector;
 import org.ektorp.CouchDbInstance;
@@ -15,32 +20,27 @@ import org.ektorp.http.StdHttpClient;
 import org.ektorp.impl.StdCouchDbInstance;*/
 
 
+@Component
 public class CouchDB {
 
 
-    protected HttpClient authenticatedHttpClient;
+    private HttpClient authenticatedHttpClient;
 
-    protected CouchDbConnector dbConnector;
+    Map<String, CouchDbConnector> connectorMap = new HashMap<>();
 
 
-    public CouchDB(String dataBaseName) {
+    @Autowired
+    public CouchDB(CouchDBConfig config) {
         // Load DotEnv CouchDB credentials
-        Dotenv dotenv = Dotenv.load();
-
-        String host = dotenv.get("couchdb_host");
-        String port = dotenv.get("couchdb_port");
-        String user = dotenv.get("couchdb_user");
-        String password = dotenv.get("couchdb_password");
         // Manage CouchDB url endpoint
-        System.out.println("http://" + host + ":" + port);
+
+        System.out.println("http://" + config.getHost() + ":" + config.getPort());
         try {
             authenticatedHttpClient = new StdHttpClient.Builder()
-                    .url("http://" + host + ":" + port)
-                    .username(user)
-                    .password(password)
+                    .url("http://" + config.getHost() + ":" + config.getPort())
+                    .username(config.getUser())
+                    .password(config.getPassword())
                     .build();
-            CouchDbInstance dbInstance = new StdCouchDbInstance(this.authenticatedHttpClient);
-            this.dbConnector = dbInstance.createConnector(dataBaseName, false);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -52,7 +52,15 @@ public class CouchDB {
         return authenticatedHttpClient;
     }
 
-    public CouchDbConnector getDbConnector() {
-        return dbConnector;
+    public CouchDbConnector getDbConnector(String dbName) {
+        if(connectorMap.containsKey(dbName)){
+            return connectorMap.get(dbName);
+        }
+
+        CouchDbInstance dbInstance = new StdCouchDbInstance(this.authenticatedHttpClient);
+        CouchDbConnector connector = dbInstance.createConnector(dbName, false);
+        connectorMap.put(dbName, connector);
+        return connector;
     }
+
 }

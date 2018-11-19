@@ -20,16 +20,9 @@ public class HelloController {
         return "Hello World!";
     }
 
-    @RequestMapping( value = "/apitest", method = RequestMethod.GET)
-    String hi() {
-        ThreatDAO couchDB = new ThreatDAO("spam_det");
-        couchDB.getAllEmails();
-        return "<h1 style=\"color: blue;\"> Test for HTML  </h1>";
-    }
-
     @RequestMapping(value = "/getString", method = RequestMethod.POST, produces = "application/json")
     String hi2(@RequestBody String data) {
-        ThreatDAO couchDB = new ThreatDAO("spam_det");
+        ThreatDAO couchDB = new ThreatDAO(/*"spam_det"*/);
         System.out.println(data);
         couchDB.insertElements(data);
         return "{\"hello\":\"lala\"}";
