@@ -58,7 +58,7 @@ public class CouchDB {
         }
 
         CouchDbInstance dbInstance = new StdCouchDbInstance(this.authenticatedHttpClient);
-        CouchDbConnector connector = dbInstance.createConnector(dbName, false);
+        CouchDbConnector connector = dbInstance.createConnector(dbName, true);
         connectorMap.put(dbName, connector);
         return connector;
     }
