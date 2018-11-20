@@ -40,3 +40,7 @@ Server/*/build/
 
 .idea/
 *.iml
+
+
+# Python files
+venv/
