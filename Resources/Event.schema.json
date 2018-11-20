@@ -40,7 +40,7 @@
             "type": "object",
             "properties": {
                 "messageType": {
-                    "description": "Mail | HTTP Request| HTTP Request",
+                    "description": "Mail | HTTP Request",
                     "type": "string"
                 },
                 "content": {

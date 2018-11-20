@@ -53,6 +53,14 @@ Clean and build project.
 ```bash
  $ mvn clean package
 ```
+
+
+Skip test using the following command
+
+```bash
+$ mvn clean package -Dmaven.test.skip=true
+
+```
 Download sources dependencies.
 ```bash
  $ mvn dependency:sources
