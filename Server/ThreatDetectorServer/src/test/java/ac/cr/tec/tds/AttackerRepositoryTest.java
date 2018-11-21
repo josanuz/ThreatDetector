@@ -12,7 +12,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = App.class)
@@ -45,6 +44,7 @@ public class AttackerRepositoryTest {
    @Test
     public void testGetAll(){
        List<Attacker> byIp = attackerRepository.getAll();
+       byIp.forEach(System.out::println);
        assert byIp.size() == 12;
    }
 }
