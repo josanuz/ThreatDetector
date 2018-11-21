@@ -2,7 +2,7 @@ package ac.cr.tec.tds.controller.rest;
 
 import ac.cr.tec.tds.common.entities.Response;
 import ac.cr.tec.tds.common.entities.Threat;
-import ac.cr.tec.tds.services.TestService;
+import ac.cr.tec.tds.services.check.IpRuleCheckService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class MessageController {
 
     @Autowired
-    TestService testService;
+    IpRuleCheckService ipRuleCheckService;
 
 
     @RequestMapping(value = "/", method = RequestMethod.POST, consumes = "application/json")
@@ -23,7 +23,7 @@ public class MessageController {
 
     @RequestMapping(value = "/lucky", method = RequestMethod.GET)
     public int getLuckyNumber(){
-        return testService.getLuckyNumber();
+        return ipRuleCheckService.getLuckyNumber();
     }
 
 }

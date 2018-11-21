@@ -41,4 +41,13 @@ public class Attacker extends DatedCouchDBDocument {
         this.mailAddress = mailAddress;
     }
 
+    @Override
+    public String toString() {
+        return "Attacker{" +
+                "ip='" + ip + '\'' +
+                ", userName='" + userName + '\'' +
+                ", mailAddress='" + mailAddress + '\'' +
+                '}';
+    }
 }
+
