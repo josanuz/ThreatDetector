@@ -1,11 +1,9 @@
 package ac.cr.tec.tds.dao;
 
 import ac.cr.tec.tds.common.entities.couchDb.Threat;
-import ac.cr.tec.tds.db.CouchDB;
 import ac.cr.tec.tds.repositories.ThreatRepository;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.ektorp.CouchDbConnector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
