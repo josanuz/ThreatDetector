@@ -14,6 +14,12 @@ public class VerdictResult extends DatedCouchDBDocument {
         this.resultInt = resultInt;
     }
 
+    public VerdictResult(String judge, Verdict verdict) {
+        this.judge = judge;
+        this.resultString = verdict.getResolution().name();
+        this.resultInt = verdict.getResolution().ordinal();
+    }
+
     public String getJudge() {
         return judge;
     }
