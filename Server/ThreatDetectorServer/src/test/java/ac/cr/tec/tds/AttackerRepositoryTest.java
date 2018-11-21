@@ -35,8 +35,8 @@ public class AttackerRepositoryTest {
                new Attacker("10.10.10.8", "1010108", "1010108@attacker.com"),
                new Attacker("10.10.10.9", "1010109", "1010109@attacker.com"),
                new Attacker("10.10.10.10", "10101010", "10101010@attacker.com"),
-               new Attacker("10.10.10.11", "10101011", "10101011@attacker.com"),
-               new Attacker("10.10.10.12", "10101013", "10101012@attacker.com")
+               new Attacker("10.10.10.10", "10101011", "10101011@attacker.com"),
+               new Attacker("10.10.10.10", "10101013", "10101012@attacker.com")
        ).forEach(attacker -> attackerRepository.add(attacker));
 
    }
@@ -47,4 +47,19 @@ public class AttackerRepositoryTest {
        byIp.forEach(System.out::println);
        assert byIp.size() == 12;
    }
+
+    @Test
+    public void testGetAllIps(){
+        List<String> attackersIps = attackerRepository.allAttackersIps();
+        attackersIps.forEach(System.out::println);
+        assert attackersIps.size() == 12;
+    }
+
+    @Test
+    public void testFindIps(){
+        List<Attacker> byIp = attackerRepository.findByIp("10.10.10.12");
+        byIp.forEach(System.out::println);
+        assert byIp.size() == 1;
+    }
+
 }
