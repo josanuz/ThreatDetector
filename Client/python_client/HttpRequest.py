@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import requests as req
 import os
+
 class HttpRequest():
 
     def __init__(self):
@@ -16,17 +17,5 @@ class HttpRequest():
         return response
 
 
-ht = HttpRequest()
 
-r = ht.post_request(
-    'getString',
-    [
-        {
-            'sasa': 15445,
-            'enero': 2014,
-            'dsaas': 2024
-        }
-    ]
-)
 
-print(r.text)
