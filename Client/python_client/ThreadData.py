@@ -106,8 +106,3 @@ class ThreadData():
 
     def required(self):
         return ["orginIp", "headers", "destinationIP", "protocol", "lenght", "content"]
-
-
-lal = ThreadData()
-
-print (lal.data)
