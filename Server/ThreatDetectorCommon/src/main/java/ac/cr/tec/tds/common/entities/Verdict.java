@@ -32,4 +32,11 @@ public class Verdict{
         Verdict o = (Verdict)obj;
         return o.resolution.equals(resolution);
     }
+
+    @Override
+    public String toString() {
+        return "Verdict{" +
+                "resolution=" + resolution +
+                '}';
+    }
 }

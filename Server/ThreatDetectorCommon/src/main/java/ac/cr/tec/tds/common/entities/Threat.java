@@ -14,6 +14,10 @@ import java.util.*;
  */
 public class Threat extends CouchDbDocument {
 
+    static public String MESSAGE_TYPE_MAIL = "Mail";
+    static public String MESSAGE_TYPE_HTTP = "HTTP Request";
+    static public String MESSAGE_TYPE_PLAIN = "Plain Message";
+
     /**
      * Packet Origin IP
      * 
