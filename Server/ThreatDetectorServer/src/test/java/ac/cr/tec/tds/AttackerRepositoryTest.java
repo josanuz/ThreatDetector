@@ -2,6 +2,8 @@ package ac.cr.tec.tds;
 
 import ac.cr.tec.tds.common.entities.Attacker;
 import ac.cr.tec.tds.repositories.AttackerRepository;
+import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +25,7 @@ public class AttackerRepositoryTest {
 
    @Before
    public void init(){
-       attackerRepository.getAll().forEach(a -> attackerRepository.remove(a));
+       attackerRepository.deleteAll();
        Arrays.asList(
                new Attacker("10.10.10.1", "1010101", "1010101@attacker.com"),
                new Attacker("10.10.10.2", "1010102", "1010102@attacker.com"),
@@ -36,29 +38,44 @@ public class AttackerRepositoryTest {
                new Attacker("10.10.10.9", "1010109", "1010109@attacker.com"),
                new Attacker("10.10.10.10", "10101010", "10101010@attacker.com"),
                new Attacker("10.10.10.11", "10101011", "10101011@attacker.com"),
-               new Attacker("10.10.10.12", "10101013", "10101012@attacker.com")
+               new Attacker("10.10.10.12", "10101013", "10101012@attacker.com"),
+               new Attacker(null, "10101014", "10101014@attacker.com"),
+               new Attacker("10.10.10.15", "10101015", "10101015@attacker.com"),
+               new Attacker(null, "10101016", null)
        ).forEach(attacker -> attackerRepository.add(attacker));
+   }
 
+   @After
+   public void cleanUp(){
+       attackerRepository.deleteAll();
    }
 
    @Test
     public void testGetAll(){
-       List<Attacker> byIp = attackerRepository.getAll();
-       byIp.forEach(System.out::println);
-       assert byIp.size() == 12;
+       List<Attacker> all = attackerRepository.getAll();
+       all.forEach(System.out::println);
+       Assert.assertEquals("There should be 15 elements in total", all.size(), 15);
    }
 
+    @Test
+    public void testGetAllEmails() {
+        List<String> allAttackersEmail = attackerRepository.allAttackersEmail();
+        allAttackersEmail.forEach(System.out::println);
+        Assert.assertEquals("There should be 14 emails", allAttackersEmail.size(), 14);
+    }
     @Test
     public void testGetAllIps(){
         List<String> attackersIps = attackerRepository.allAttackersIps();
         attackersIps.forEach(System.out::println);
-        assert attackersIps.size() == 12;
+        Assert.assertEquals("There should be 13 Ips", attackersIps.size(), 13);
     }
 
     @Test
     public void testFindIps(){
         List<Attacker> byIp = attackerRepository.findByIp("10.10.10.12");
         byIp.forEach(System.out::println);
+        Assert.assertEquals("There should be one and only one element", byIp.size(), 1);
+        Assert.assertEquals("One Element should be found and has IP", byIp.get(0).getIp(), "10.10.10.12");
         assert byIp.size() == 1;
     }
 
