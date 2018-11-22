@@ -20,7 +20,8 @@ def main():
         print ('Message #: %s\nWait: %ss' % (i+1, time_sleep))
         print ('Headers: %s' % r.headers)
         print('Encoding: %s' % r.encoding)
-
+        print ('Response : %s' % str(r.text))
+        print (r)
         # Sleep messages randomly
         time.sleep(time_sleep)
 
