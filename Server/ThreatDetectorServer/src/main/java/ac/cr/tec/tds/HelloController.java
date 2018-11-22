@@ -1,21 +1,31 @@
 package ac.cr.tec.tds;
 
+import ac.cr.tec.tds.dao.ThreatDAO;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
+
+
     @Autowired
     NamedParameterJdbcTemplate jdbcTemplate;
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     String hello() {
+
         return "Hello World!";
+    }
+
+    @RequestMapping(value = "/getString", method = RequestMethod.POST, produces = "application/json")
+    String hi2(@RequestBody String data) {
+        ThreatDAO couchDB = new ThreatDAO(/*"spam_det"*/);
+        System.out.println(data);
+        couchDB.insertElements(data);
+        return "{\"hello\":\"lala\"}";
     }
 
     @Data
