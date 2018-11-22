@@ -9,9 +9,7 @@ import ac.cr.tec.tds.common.entities.VerdictResult;
 import ac.cr.tec.tds.repositories.AttackerRepository;
 import ac.cr.tec.tds.repositories.ThreatRepository;
 import ac.cr.tec.tds.repositories.VerdictResultRepository;
-import ac.cr.tec.tds.rules.ClearThreatRule;
-import ac.cr.tec.tds.rules.OriginIpRule;
-import ac.cr.tec.tds.rules.Rule;
+import ac.cr.tec.tds.rules.*;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +30,7 @@ public class MainAnalysisService implements InitializingBean {
     @Autowired
     ThreatRepository threatRepository;
 
-    List<Rule> ruleList = new ArrayList<>();
+    private List<Rule> ruleList = new ArrayList<>();
 
     private static KeyValue<Rule, Verdict> allGood = KeyValue.from(clearThreatRule, Verdict.CLEAR);
 
@@ -55,5 +53,7 @@ public class MainAnalysisService implements InitializingBean {
     @Override
     public void afterPropertiesSet() {
         ruleList.add(new OriginIpRule(attackerRepository));
+        ruleList.add(new EmailAttackerAddress(attackerRepository));
+        ruleList.add(new SQLInject());
     }
 }
