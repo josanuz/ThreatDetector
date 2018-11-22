@@ -16,6 +16,7 @@ public class OriginIpRule implements Rule {
 
     @Override
     public Verdict judge(Threat threat) {
+        RULE_LOGGER.info(OriginIpRule.class.getName() + " Analyzing Threat: " + threat);
         List<String> strings = attackerRepository.allAttackersIps();
         return strings.contains(threat.getOriginIp()) ? Verdict.DANGEROUS : Verdict.CLEAR;
     }
