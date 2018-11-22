@@ -1,0 +1,32 @@
+{
+    "originIp": "127.0.0.1",
+    "destinationIP": "127.0.0.1",
+    "headers": [
+        {
+            "headerName": "Accept",
+            "headerValue": "application/json"
+        },
+        {
+            "headerName": "Content Type",
+            "headerValue": "application/json"
+        },
+        {
+            "headerName": "User Agent",
+            "headerValue": "SpringTestJUnit/CURL"
+        },
+        {
+            "headerName": "Forwarder",
+            "headerValue": "0.0.0.0"
+        },
+        {
+            "headerName": "Host",
+            "headerValue": "Local Host"
+        }
+    ],
+    "protocol": "HTTP",
+    "length": 512,
+    "content": {
+        "messageType": "HTTP Request",
+        "content": "GET /api/messages?url=SELECT%20*%20FROM%20USER%20WHERE%20TRUE%3B"
+    }
+}
