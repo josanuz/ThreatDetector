@@ -13145,7 +13145,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[146]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -13172,7 +13172,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">indices_general</span><span class="p">(</span><span class="n">MC</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
@@ -13202,7 +13202,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">datos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;spambase/spambase.csv&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">decimal</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
@@ -13219,7 +13219,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[148]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13236,7 +13236,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">datos</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13252,7 +13252,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[149]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13441,10 +13441,10 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">57</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">54</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">57</span><span class="p">:</span><span class="mi">58</span><span class="p">]</span>
 </pre></div>
 
@@ -13455,7 +13455,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13494,7 +13494,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -13507,7 +13507,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[153]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -13535,7 +13535,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[153]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13554,7 +13554,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[154]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Las predicciones en Testing son: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)))</span>
@@ -13574,7 +13574,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Las predicciones en Testing son: [1 0 0 ... 0 1 0]
+<pre>Las predicciones en Testing son: [1 0 0 ... 1 1 0]
 </pre>
 </div>
 </div>
@@ -13585,7 +13585,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[155]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precisión en Testing: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
@@ -13605,7 +13605,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Precisión en Testing: 0.80
+<pre>Precisión en Testing: 0.91
 </pre>
 </div>
 </div>
@@ -13616,7 +13616,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[156]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prediccion</span> <span class="o">=</span> <span class="n">instancia_knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -13639,8 +13639,8 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Matriz de Confusión:
-[[699 123]
- [159 400]]
+[[764  58]
+ [ 72 487]]
 </pre>
 </div>
 </div>
@@ -13651,7 +13651,7 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">indices_general</span><span class="p">(</span><span class="n">MC</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
@@ -13675,18 +13675,18 @@ mejor indicado para realizar una deteción de <strong>spam</strong> o <strong>no
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Matriz de Confusion:
-[[699 123]
- [159 400]]
+[[764  58]
+ [ 72 487]]
 
 Precision Global:
-0.7958001448225923
+0.9058653149891384
 
 Error Global:
-0.20419985517740769
+0.09413468501086164
 
 Precisión por categoria:
-          0         1
-0  0.850365  0.715564
+         0         1
+0  0.92944  0.871199
 </pre>
 </div>
 </div>
@@ -13704,7 +13704,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[158]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_arbol</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13717,7 +13717,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_arbol</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -13733,7 +13733,7 @@ Precisión por categoria:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[159]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13755,7 +13755,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Las predicciones en Testing son: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_arbol</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)))</span>
@@ -13775,7 +13775,7 @@ Precisión por categoria:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Las predicciones en Testing son: [1 0 0 ... 0 1 0]
+<pre>Las predicciones en Testing son: [1 0 0 ... 0 0 0]
 </pre>
 </div>
 </div>
@@ -13786,7 +13786,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precisión en Testing: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_arbol</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
@@ -13806,7 +13806,7 @@ Precisión por categoria:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Precisión en Testing: 0.893
+<pre>Precisión en Testing: 0.899
 </pre>
 </div>
 </div>
@@ -13817,7 +13817,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prediccion</span> <span class="o">=</span> <span class="n">instancia_arbol</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -13840,8 +13840,8 @@ Precisión por categoria:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Matriz de Confusión:
-[[748  74]
- [ 74 485]]
+[[763  59]
+ [ 81 478]]
 </pre>
 </div>
 </div>
@@ -13852,7 +13852,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">indices_general</span><span class="p">(</span><span class="n">MC</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
@@ -13876,18 +13876,18 @@ Precisión por categoria:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Matriz de Confusion:
-[[748  74]
- [ 74 485]]
+[[763  59]
+ [ 81 478]]
 
 Precision Global:
-0.8928312816799421
+0.8986241853729182
 
 Error Global:
-0.10716871832005792
+0.10137581462708178
 
 Precisión por categoria:
           0         1
-0  0.909976  0.867621
+0  0.928224  0.855098
 </pre>
 </div>
 </div>
@@ -13905,7 +13905,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[164]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_bosque</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13918,7 +13918,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_bosque</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -13946,7 +13946,7 @@ Precisión por categoria:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[165]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -13968,7 +13968,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Las predicciones en Testing son: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_bosque</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)))</span>
@@ -13999,7 +13999,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precisión en Testing: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_bosque</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
@@ -14019,7 +14019,7 @@ Precisión por categoria:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Precisión en Testing: 0.936
+<pre>Precisión en Testing: 0.928
 </pre>
 </div>
 </div>
@@ -14030,7 +14030,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[168]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prediccion</span> <span class="o">=</span> <span class="n">instancia_bosque</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14053,8 +14053,8 @@ Precisión por categoria:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Matriz de Confusión:
-[[799  23]
- [ 66 493]]
+[[794  28]
+ [ 72 487]]
 </pre>
 </div>
 </div>
@@ -14065,7 +14065,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">indices_general</span><span class="p">(</span><span class="n">MC</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
@@ -14078,7 +14078,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
@@ -14101,18 +14101,18 @@ Precisión por categoria:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Matriz de Confusion:
-[[799  23]
- [ 66 493]]
+[[794  28]
+ [ 72 487]]
 
 Precision Global:
-0.9355539464156408
+0.9275887038377987
 
 Error Global:
-0.06444605358435918
+0.07241129616220132
 
 Precisión por categoria:
           0         1
-0  0.972019  0.881932
+0  0.965937  0.871199
 </pre>
 </div>
 </div>
@@ -14130,7 +14130,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;scale&#39;</span><span class="p">)</span>
@@ -14143,7 +14143,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -14171,7 +14171,7 @@ Precisión por categoria:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[172]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -14191,7 +14191,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[173]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Las predicciones en Testing son: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)))</span>
@@ -14222,7 +14222,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[174]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precisión en Testing: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_svm</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
@@ -14242,7 +14242,7 @@ Precisión por categoria:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Precisión en Testing: 0.771
+<pre>Precisión en Testing: 0.923
 </pre>
 </div>
 </div>
@@ -14253,7 +14253,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[175]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prediccion</span> <span class="o">=</span> <span class="n">instancia_svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14276,8 +14276,8 @@ Precisión por categoria:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Matriz de Confusión:
-[[720 102]
- [214 345]]
+[[786  36]
+ [ 70 489]]
 </pre>
 </div>
 </div>
@@ -14288,7 +14288,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">indices_general</span><span class="p">(</span><span class="n">MC</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
@@ -14312,18 +14312,18 @@ Precisión por categoria:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Matriz de Confusion:
-[[720 102]
- [214 345]]
+[[786  36]
+ [ 70 489]]
 
 Precision Global:
-0.7711803041274439
+0.9232440260680667
 
 Error Global:
-0.22881969587255613
+0.07675597393193334
 
 Precisión por categoria:
           0         1
-0  0.875912  0.617174
+0  0.956204  0.874776
 </pre>
 </div>
 </div>
@@ -14341,7 +14341,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_nl</span><span class="o">=</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;lbfgs&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">38</span><span class="p">,</span> <span class="mi">185</span><span class="p">),</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -14354,7 +14354,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">instancia_nl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -14382,7 +14382,7 @@ Precisión por categoria:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[178]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -14405,7 +14405,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Las predicciones en Testing son: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_nl</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)))</span>
@@ -14436,7 +14436,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precisión en Testing: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">instancia_nl</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
@@ -14456,7 +14456,7 @@ Precisión por categoria:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Precisión en Testing: 0.860
+<pre>Precisión en Testing: 0.917
 </pre>
 </div>
 </div>
@@ -14467,7 +14467,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prediccion</span> <span class="o">=</span> <span class="n">instancia_svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14490,8 +14490,8 @@ Precisión por categoria:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Matriz de Confusión:
-[[720 102]
- [214 345]]
+[[786  36]
+ [ 70 489]]
 </pre>
 </div>
 </div>
@@ -14502,7 +14502,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">indices_general</span><span class="p">(</span><span class="n">MC</span><span class="p">,</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
@@ -14526,18 +14526,18 @@ Precisión por categoria:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Matriz de Confusion:
-[[720 102]
- [214 345]]
+[[786  36]
+ [ 70 489]]
 
 Precision Global:
-0.7711803041274439
+0.9232440260680667
 
 Error Global:
-0.22881969587255613
+0.07675597393193334
 
 Precisión por categoria:
           0         1
-0  0.875912  0.617174
+0  0.956204  0.874776
 </pre>
 </div>
 </div>
@@ -14563,7 +14563,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="k">import</span> <span class="n">joblib</span>
@@ -14580,7 +14580,7 @@ Precisión por categoria:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[183]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -14597,7 +14597,7 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;random_forest.joblib&#39;</span><span class="p">)</span> 
@@ -14610,10 +14610,10 @@ Precisión por categoria:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,:]))</span>
 </pre></div>
 
     </div>
@@ -14626,13 +14626,46 @@ Precisión por categoria:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[185]:</div>
+    <div class="prompt output_prompt">Out[52]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([1, 0, 0, ..., 0, 1, 0])</pre>
+<pre>numpy.ndarray</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[53]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array(0)</pre>
 </div>
 
 </div>

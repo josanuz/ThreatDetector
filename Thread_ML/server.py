@@ -1,6 +1,7 @@
 from flask import Flask, request, json
 from AntiSpam import AntiSpam
-
+from Model import Model
+from TextCleaner import TextCleaner, SPECIAL_CHARS, SPAM_WORDS
 app = Flask(__name__)
 
 
@@ -35,7 +36,19 @@ def is_spam():
         #Recived data
         data = request.get_json(force=True)
         print(data)
-        return success(data)
+        if 'text' in data:
+            lala=TextCleaner()
+            dic= lala.cointain_words_in_text(
+                'Confirm wants us to unsubscribe, too',
+                SPAM_WORDS,
+                SPECIAL_CHARS
+            )
+
+            m = Model('random_forest.joblib')
+            response = {'is_soam': int(m.predict_data(dic)[0])}
+            return success(response)
+        else:
+            return error()
 
 
 @app.route('/api/antispam', methods = ['GET', 'POST'])
