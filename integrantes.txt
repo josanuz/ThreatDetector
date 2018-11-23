@@ -1,0 +1,4 @@
+Curso: Base de Datos Avanzadas 
+Estudiantes: 
+Johan Salas Núnez 402190347
+Aarón Sibaja Villalobos 402230919

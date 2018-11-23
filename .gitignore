@@ -31,6 +31,16 @@ Server/*/build/
 .factorypath
 
 
+# Dot Env files
+
+.env
+
+
 # Idea files
 
 .idea/
+*.iml
+
+
+# Python files
+venv/

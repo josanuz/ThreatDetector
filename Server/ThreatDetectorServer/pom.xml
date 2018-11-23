@@ -39,6 +39,11 @@
             <artifactId>h2</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>4.7.1</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
@@ -60,6 +65,12 @@
             <artifactId>rest-assured</artifactId>
             <version>${rest.assured.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ac.cr.tec</groupId>
+            <artifactId>ThreatDetectorCommon</artifactId>
+            <version>1.0-ALPHA</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <build>
